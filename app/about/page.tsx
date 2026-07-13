@@ -1,7 +1,7 @@
 "use strict";
 
 "use client";
-
+//hiii
 import React from "react";
 import Image from "next/image";
 import { ArrowUpRight, GraduationCap, CheckCircle2 } from "lucide-react";
@@ -36,13 +36,13 @@ export default function About() {
               {/* Image Frame */}
               <div className="relative aspect-square rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800">
                 {/* Fallback to local avatar.jpg from public assets */}
-                <img 
-                  src="/assets/avatar.jpg" 
-                  alt="Rajesh Choudhary" 
+                <img
+                  src="/assets/avatar.jpg"
+                  alt="Rajesh Choudhary"
                   className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              
+
               {/* Stat Metric */}
               <div className="glass-card p-6 rounded-xl border border-zinc-900 text-center space-y-2">
                 <div className="text-4xl font-extrabold text-indigo-500 font-mono tracking-tight">{impactMetric}</div>
@@ -52,7 +52,7 @@ export default function About() {
 
             <div className="md:col-span-8 space-y-6 text-zinc-300 text-[15px] font-light leading-relaxed">
               <h3 className="text-xl font-bold text-white tracking-tight">{philosophyTitle}</h3>
-              
+
               {philosophyBody.split("\n\n").map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
@@ -83,10 +83,10 @@ export default function About() {
               <h3 className="text-lg font-bold text-white tracking-tight">Want to follow my daily builds?</h3>
               <p className="text-zinc-500 text-sm font-light mt-1">I publish roadmaps, bug-hunting guides, and design thoughts on LinkedIn.</p>
             </div>
-            <a 
-              href="https://linkedin.com/in/rajesh" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://linkedin.com/in/rajesh"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-4 py-2.5 text-xs font-semibold text-white bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 rounded-lg transition-all"
             >
               Follow on LinkedIn
