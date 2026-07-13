@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #09090b; /* Zinc 950 */
+  --foreground: #fafafa; /* Zinc 50 */
+  --muted: #71717a; /* Zinc 500 */
+  --muted-foreground: #a1a1aa; /* Zinc 400 */
+  --accent: #6366f1; /* Electric Indigo */
+  --accent-foreground: #ffffff;
+  --border: #27272a; /* Zinc 800 */
+  --card: #18181b; /* Zinc 900 */
+  --card-foreground: #fafafa;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar - Minimal Apple/Linear style */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a; /* Zinc 800 */
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46; /* Zinc 700 */
+}
+
+/* Selection highlight */
+::selection {
+  background: rgba(99, 102, 241, 0.25);
+  color: #ffffff;
+}
+
+/* Custom Premium Utilities */
+.glass-panel {
+  background: rgba(24, 24, 27, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(20, 20, 23, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(99, 102, 241, 0.2);
+  background: rgba(24, 24, 27, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.5), 0 0 20px -2px rgba(99, 102, 241, 0.05);
+}
+
+/* Glowing text effects */
+.glow-text {
+  text-shadow: 0 0 40px rgba(99, 102, 241, 0.2);
+}
+
+/* Premium gradient borders */
+.gradient-border-wrapper {
+  position: relative;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.01) 100%);
+  padding: 1px;
+}
+
+.gradient-border-content {
+  background: #101012;
+  border-radius: 11px;
+}
+
+/* Smooth Scrolling wrapper */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Micro-animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 0.25; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 8s ease-in-out infinite;
+}
